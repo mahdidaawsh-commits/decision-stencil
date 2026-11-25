@@ -2,7 +2,7 @@
 
 DecisionStencil compiles documented policy decisions into an optimal binary decision tree. Validators retrieve the source notes and independently determine each recorded disposition. A calling contract can query the published tree and inspect which questions support its answer.
 
-[Contract source](contracts/decision_stencil.py) · [Example case matrix](fixtures/cache_reuse.json) · [Direct tests](tests/direct/test_decision_stencil.py)
+[Contract source](contracts/decision_stencil.py) · [Example case matrix](fixtures/cache_reuse.json) · [StudioNet proof](#studionet-proof) · [Submission text](SUBMISSION.md)
 
 ## What gets compiled
 
@@ -43,3 +43,14 @@ python -m pytest tests/direct -q
 ```
 
 The tests compare the compiler against independent exhaustive tree search for all 337 two-feature ternary and three-feature binary decision tables. They also exercise matrix completeness, changed bytes, and validator disagreement.
+
+## StudioNet proof
+
+Validators finalized publication of the eight-case stencil. The resulting tree has three internal nodes and a worst-case depth of three. Independent replay checks the deployed source, three finalized receipts, the complete stencil, and the ordered read paths for accept, reject, and unknown.
+
+[Deployed contract](https://explorer-studio.genlayer.com/address/0x8D39500944a35d970B55c31f2d70DD92AAEDF27F) · [Proof ledger](proofs/studionet.json) · [GenVM checks](https://github.com/mahdidaawsh-commits/decision-stencil/actions/runs/45688964848)
+
+```sh
+npm ci
+npm run verify
+```

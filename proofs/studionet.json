@@ -1,0 +1,128 @@
+{
+  "network": "studionet",
+  "repository": "mahdidaawsh-commits/decision-stencil",
+  "revision": "b8a8e36dc1402c96fd249f0a9925bcefa85a86e9",
+  "source_sha256": "b8881786bd60545e441a29d15f15353b8c8db16e3cd47e8709c397ef892366f6",
+  "stencil_id": "407d2cee375dda7caadc0f90ff17d8ac5ef5f53b72bcf1bad1071d8a390fd931",
+  "transactions": [
+    {
+      "label": "deploy",
+      "sender": "0xC79f681BE5D65f4E578F113fCF1D7e49333b2919",
+      "test_fee_deposit_wei": "25000000000002588",
+      "evm_hash": "0x39cdbf4035ed9ce1329b5120004db7b7ced7c9c482dd4d88ecfcf6c12f4e1a11",
+      "hash": "0x39cdbf4035ed9ce1329b5120004db7b7ced7c9c482dd4d88ecfcf6c12f4e1a11",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "agree": 4,
+      "votes": 5
+    },
+    {
+      "label": "publish-cache-stencil",
+      "sender": "0x15b867E9055E91612697520904DFC671703E72d7",
+      "test_fee_deposit_wei": "125000000000002588",
+      "evm_hash": "0xc7fd20b98be0aed3cb52bb23f4a7d3ecedb7ec720b4def8559d8e9b469798f9a",
+      "hash": "0xc7fd20b98be0aed3cb52bb23f4a7d3ecedb7ec720b4def8559d8e9b469798f9a",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "agree": 3,
+      "votes": 5
+    },
+    {
+      "label": "reject-duplicate",
+      "sender": "0xf5dCB15897bE9f8F172B2219580FbA36192AD876",
+      "test_fee_deposit_wei": "25000000000002588",
+      "evm_hash": "0x89b77fe97deea6c2eacd0e3a6987fbb51bf559c5b64c3a6ff99669afcd6a0311",
+      "hash": "0x89b77fe97deea6c2eacd0e3a6987fbb51bf559c5b64c3a6ff99669afcd6a0311",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "agree": 4,
+      "votes": 5
+    }
+  ],
+  "contract": "0x8D39500944a35d970B55c31f2d70DD92AAEDF27F",
+  "readback": {
+    "stencil": {
+      "depth": 3,
+      "features": [
+        "digest_matches",
+        "lockfile_matches",
+        "build_attested"
+      ],
+      "internal_nodes": 3,
+      "labels": {
+        "100": "REJECT",
+        "101": "UNKNOWN",
+        "110": "ACCEPT",
+        "111": "ACCEPT",
+        "000": "REJECT",
+        "001": "REJECT",
+        "010": "REJECT",
+        "011": "REJECT"
+      },
+      "sha256": "958e700dbea6af2968452a1cdc8d309bbd280759037ad10186b9c4c561879453",
+      "source": "mahdidaawsh-commits/decision-stencil/b8a8e36dc1402c96fd249f0a9925bcefa85a86e9/fixtures/cache_reuse.json",
+      "tree": {
+        "one": {
+          "one": {
+            "outcome": "ACCEPT"
+          },
+          "test": 1,
+          "zero": {
+            "one": {
+              "outcome": "UNKNOWN"
+            },
+            "test": 2,
+            "zero": {
+              "outcome": "REJECT"
+            }
+          }
+        },
+        "test": 0,
+        "zero": {
+          "outcome": "REJECT"
+        }
+      }
+    },
+    "representative": {
+      "101": {
+        "outcome": "UNKNOWN",
+        "questions": [
+          {
+            "bit": "1",
+            "feature": "digest_matches"
+          },
+          {
+            "bit": "0",
+            "feature": "lockfile_matches"
+          },
+          {
+            "bit": "1",
+            "feature": "build_attested"
+          }
+        ]
+      },
+      "110": {
+        "outcome": "ACCEPT",
+        "questions": [
+          {
+            "bit": "1",
+            "feature": "digest_matches"
+          },
+          {
+            "bit": "1",
+            "feature": "lockfile_matches"
+          }
+        ]
+      },
+      "001": {
+        "outcome": "REJECT",
+        "questions": [
+          {
+            "bit": "0",
+            "feature": "digest_matches"
+          }
+        ]
+      }
+    }
+  }
+}
