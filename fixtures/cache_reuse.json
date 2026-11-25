@@ -1,0 +1,13 @@
+{
+  "features": ["digest_matches", "lockfile_matches", "build_attested"],
+  "cases": {
+    "000": "The maintainer closed the review with a final denial of cache reuse.",
+    "001": "An engineer recommended reuse. The release reviewer subsequently recorded a final rejection.",
+    "010": "The reviewing authority signed off on the opposite action. This cache entry was explicitly rejected for reuse.",
+    "011": "A preliminary review was favorable. The final disposition issued by the maintainer forbids reuse.",
+    "100": "The final approval form marks the cache entry ineligible. The request to reuse it was denied.",
+    "101": "The reviewer asked for additional documentation. The note ends while the request is pending, with no final disposition.",
+    "110": "The reviewer closed the request with final authorization to reuse the cache entry.",
+    "111": "The release reviewer issued final authorization for reuse and closed the review."
+  }
+}
